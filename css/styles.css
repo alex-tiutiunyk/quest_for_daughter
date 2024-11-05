@@ -53,12 +53,14 @@ body {
   line-height: 1.3;
   margin-bottom: 10px;
 }
+
 p {
   margin: 0 0 15px;
   text-align: justify;
 }
 
-p strong {
+p strong,
+.title strong {
   font-weight: bold;
 }
 
@@ -137,4 +139,12 @@ p .outline {
       left: 110%;
       margin-left: 80px;
   }
+}
+
+.img-inline {
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+  height: auto;
+  margin: 0 10px 20px 0;
 }

@@ -4,6 +4,7 @@ const btn_3 = document.querySelector('#step-3 .btn');
 const btn_4 = document.querySelector('#step-4 .btn');
 const btn_5 = document.querySelector('#step-5 .btn');
 const btn_6 = document.querySelector('#step-6 .btn');
+const btn_7 = document.querySelector('#step-7 .btn');
 
 const step_1 = document.querySelector('#step-1');
 const step_2 = document.querySelector('#step-2');
@@ -11,6 +12,7 @@ const step_3 = document.querySelector('#step-3');
 const step_4 = document.querySelector('#step-4');
 const step_5 = document.querySelector('#step-5');
 const step_6 = document.querySelector('#step-6');
+const step_7 = document.querySelector('#step-7');
 
 const inputName = document.getElementById('inputName');
 const inputPass1 = document.getElementById('inputPass1');
@@ -23,6 +25,7 @@ btn_2.addEventListener('click', step3Visible);
 btn_3.addEventListener('click', step4Visible);
 btn_4.addEventListener('click', step5Visible);
 btn_5.addEventListener('click', step6Visible);
+btn_6.addEventListener('click', step7Visible);
 
 function step2Visible() {
   step_1.classList.remove('active');
@@ -57,9 +60,15 @@ function step5Visible() {
 function step6Visible() {
   const password = inputPass1.value.trim();
 
-  if (password === '61930') {
+  // if (password === '61930') {
     step_5.classList.remove('active');
     step_5.classList.add('done');
     step_6.classList.add('active')
-  }
+  // }
+}
+
+function step7Visible() {
+  step_6.classList.remove('active');
+  step_6.classList.add('done');
+  step_7.classList.add('active')
 }

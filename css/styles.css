@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+#wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
+.step {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  transform: translateX(100%);
+  transition: transform ease-in-out 1s;
+  display: flex;
+  align-items: center;
+}
+.step.active {
+  transform: translateX(0);
+}
+
+.step.done {
+  transform: translateX(-100%);
+}
+
+#step-1 {
+  background-color: aqua;
+}
+
+#step-2 {
+  background-color: azure;
+}
+
+#step-3 {
+  background-color: beige;
+}
+
+#step-4 {
+  background-color: cornflowerblue;
+}
+
+.step .holder {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 26px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.input-text {
+  display: block;
+  margin: 0 auto 20px;
+  width: 250px;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  font-size: 28px;
+  line-height: 28px;
+  padding: 5px;
+}

@@ -17,6 +17,7 @@ const step_6 = document.querySelector('#step-6');
 const step_7 = document.querySelector('#step-7');
 const step_8 = document.querySelector('#step-8');
 const step_9 = document.querySelector('#step-9');
+const step_10 = document.querySelector('#step-10');
 
 const inputName = document.getElementById('inputName');
 const inputPass1 = document.getElementById('inputPass1');
@@ -32,6 +33,7 @@ btn_5.addEventListener('click', step6Visible);
 btn_6.addEventListener('click', step7Visible);
 btn_7.addEventListener('click', step8Visible);
 btn_8.addEventListener('click', step9Visible);
+btn_9.addEventListener('click', step10Visible);
 
 function step2Visible() {
   step_1.classList.remove('active');
@@ -93,4 +95,10 @@ function step9Visible() {
     step_8.classList.add('done');
     step_9.classList.add('active')
   }
+}
+
+function step10Visible() {
+  step_9.classList.remove('active');
+  step_9.classList.add('done');
+  step_10.classList.add('active')
 }

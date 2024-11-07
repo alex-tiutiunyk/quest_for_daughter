@@ -79,11 +79,11 @@ function step5Visible() {
 function step6Visible() {
   const password = inputPass1.value.trim();
 
-  // if (password === '61930') {
+  if (password === '61930') {
     step_5.classList.remove('active');
     step_5.classList.add('done');
     step_6.classList.add('active');
-  // }
+  }
 }
 
 function step7Visible() {

@@ -7,6 +7,9 @@ const btn_6 = document.querySelector('#step-6 .btn');
 const btn_7 = document.querySelector('#step-7 .btn');
 const btn_8 = document.querySelector('#step-8 .btn');
 const btn_9 = document.querySelector('#step-9 .btn');
+const btn_10 = document.querySelector('#step-10 .btn');
+const btn_11 = document.querySelector('#step-11 .btn');
+const btn_12 = document.querySelector('#step-12 .btn');
 
 const step_1 = document.querySelector('#step-1');
 const step_2 = document.querySelector('#step-2');
@@ -18,10 +21,15 @@ const step_7 = document.querySelector('#step-7');
 const step_8 = document.querySelector('#step-8');
 const step_9 = document.querySelector('#step-9');
 const step_10 = document.querySelector('#step-10');
+const step_11 = document.querySelector('#step-11');
+const step_12 = document.querySelector('#step-12');
+const step_13 = document.querySelector('#step-13');
 
 const inputName = document.getElementById('inputName');
 const inputPass1 = document.getElementById('inputPass1');
 const inputPass2 = document.getElementById('inputPass2');
+const inputPass3 = document.getElementById('inputPass3');
+const inputPass4 = document.getElementById('inputPass4');
 
 const outName = document.getElementById('outName');
 
@@ -34,6 +42,9 @@ btn_6.addEventListener('click', step7Visible);
 btn_7.addEventListener('click', step8Visible);
 btn_8.addEventListener('click', step9Visible);
 btn_9.addEventListener('click', step10Visible);
+btn_10.addEventListener('click', step11Visible);
+btn_11.addEventListener('click', step12Visible);
+btn_12.addEventListener('click', step13Visible);
 
 function step2Visible() {
   step_1.classList.remove('active');
@@ -101,4 +112,30 @@ function step10Visible() {
   step_9.classList.remove('active');
   step_9.classList.add('done');
   step_10.classList.add('active')
+}
+
+function step11Visible() {
+  const password = inputPass3.value.trim();
+
+  if (password === '0001') {
+    step_10.classList.remove('active');
+    step_10.classList.add('done');
+    step_11.classList.add('active')
+  }
+}
+
+function step12Visible() {
+  step_11.classList.remove('active');
+  step_11.classList.add('done');
+  step_12.classList.add('active')
+}
+
+function step13Visible() {
+  const password = inputPass4.value.trim().toLowerCase();
+
+  if (password === 'холмс') {
+    step_12.classList.remove('active');
+    step_12.classList.add('done');
+    step_13.classList.add('active')
+  }
 }

@@ -1,6 +1,4 @@
-const btn = document.querySelectorAll('.step .btn');
-
-const step = document.querySelectorAll('.step')
+const buttons = document.querySelectorAll('.step .btn');
 
 const inputName = document.getElementById('inputName');
 const inputPass1 = document.getElementById('inputPass1');
@@ -10,7 +8,15 @@ const inputPass4 = document.getElementById('inputPass4');
 
 const outName = document.getElementById('outName');
 
-btn.forEach((button) => {
+const passArray = {
+  password_1: '61930',
+  password_2_1: '0816',
+  password_2_2: '1608',
+  password_3: '0001',
+  password_4: 'холмс'
+}
+
+buttons.forEach((button) => {
   button.addEventListener('click', stepNextVisible)
 })
 
@@ -35,26 +41,26 @@ function stepNextVisible() {
   } else if (curStep.classList.contains('step-pass1')) {
     const password = inputPass1.value.trim();
 
-    if (password === '61930') {
+    if (password === passArray.password_1) {
       nextStep();
     }
 
   } else if (curStep.classList.contains('step-pass2')) {
     const password = inputPass2.value.trim();
 
-    if (password === '0816' || password === '1608') {
+    if (password === passArray.password_2_1 || password === passArray.password_2_2) {
       nextStep();
     }
   } else if (curStep.classList.contains('step-pass3')) {
     const password = inputPass3.value.trim();
 
-    if (password === '0001') {
+    if (password === passArray.password_3) {
       nextStep();
     }
   } else if (curStep.classList.contains('step-pass4')) {
     const password = inputPass4.value.trim().toLowerCase();
 
-    if (password === 'холмс') {
+    if (password === passArray.password_4) {
       nextStep();
     }
   } else {
